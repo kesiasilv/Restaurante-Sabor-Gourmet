@@ -9,34 +9,47 @@ package com.mycompany.restaurante;
  * @author kesia.viana
  */
 public class Cliente {
-  
+
     private String nome;
     private String endereco;
     private String telefone;
 
-    public Cliente(String nome, String endereco, String telefone){
+    // Construtor da classe Cliente
+    public Cliente(String nome, String endereco, String telefone) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
     }
-    
-    public String getNome(){
+
+    // Método para definir ou atualizar as informações do cliente
+    public void registrarCliente(String nome, String endereco, String telefone) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
+
+    // Método para obter o nome do cliente
+    public String getNome() {
         return nome;
     }
 
-    public String getEndereco(){
+    // Método para obter o endereço do cliente
+    public String getEndereco() {
         return endereco;
     }
-    
-    public String getTelefone(){
+
+    // Método para obter o telefone do cliente
+    public String getTelefone() {
         return telefone;
     }
-   
-    public void visualizarCliente(){
-        System.out.println("nome: " + nome);
-        System.out.println("endereco: " + endereco);
-        System.out.println("telefone: " + telefone);
+
+    // Método para visualizar as informações do cliente
+    public void visualizarCliente() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Endereço: " + endereco);
+        System.out.println("Telefone: " + telefone);
     }
 }
+
     
 
