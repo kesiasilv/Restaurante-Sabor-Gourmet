@@ -9,33 +9,41 @@ package com.mycompany.restaurante;
  * @author kesia.viana
  */
 public class Menu {
- 
+
+    private String nome;
     private String categoria;
-    private String item;
     private Double preco;
 
-    public Menu(String categoria, String item, Double preco){
+    // Construtor da classe Menu
+    public Menu(String nome, String categoria, Double preco) {
+        this.nome = nome;
         this.categoria = categoria;
-        this.item = item;
         this.preco = preco;
     }
-    
-    public String getCategoria(){
+
+    // Método para obter o nome do item
+    public String getNome() {
+        return nome;
+    }
+
+    // Método para obter a categoria do item
+    public String getCategoria() {
         return categoria;
     }
 
-    public String getItem(){
-        return item;
-    }
-    
-    public Double getPreco(){
+    // Método para obter o preço do item
+    public Double getPreco() {
         return preco;
     }
-   
-    public void visualizarPedido(){
-        System.out.println("Categoria: " + categoria);
-        System.out.println("Item: " + item);
-        System.out.println("Preco: " + preco);
+
+    // Método para obter os detalhes do item
+    public String getDetalhesItem() {
+        return "Categoria: " + categoria + "\nItem: " + nome + "\nPreço: R$" + preco;
+    }
+
+    // Método para calcular o preço do item
+    public double calcularPreco() {
+        return preco;
     }
 }
     
