@@ -9,6 +9,7 @@ package com.mycompany.restaurante;
  * @author kesia.viana
  */
 public class Pedido {
+
     private Menu[] itens;
     private Cliente cliente;
     private double total;
@@ -47,10 +48,12 @@ public class Pedido {
         System.out.println("Status: " + status);
         System.out.println("Itens do Pedido:");
         for (int i = 0; i < numItens; i++) {
-            itens[i].visualizarPedido();
+            System.out.println(itens[i].getDetalhesItem());
+            System.out.println();
         }
         System.out.println("Total: R$" + calcularTotal());
     }
 }
+
     
 
